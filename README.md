@@ -32,4 +32,4 @@ This repo contains 2 Sass files needed to style a WordPress X Understrap site li
                           └ _child_theme.scss
   
 6. Replace these **_child_theme_variables.scss** & **_child_theme.scss** with the content of the files in this repo. 
-7. Alter the styles to suite your own needs :) (*But do not change the file names or file structure*) 
+7. Alter the styles to suit your own needs :) (*But do not change the file names or file structure*) 
