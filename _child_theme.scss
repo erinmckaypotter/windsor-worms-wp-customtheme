@@ -1,0 +1,276 @@
+
+//  || Bootstrap Classes
+
+//navbar
+
+.navbar-brand {
+	font-size: 1.25em;
+	padding-top: .5em;
+	padding-bottom: .5em;
+
+	&.custom-logo-link {
+		margin-right: 8px !important;
+	}
+
+	img {
+		width: 10vw !important;
+		max-width: 150px !important;
+		height: auto !important;
+	}
+}
+
+@media screen and (min-width:368px) {
+	.navbar-brand {
+		font-size: 1.5em;
+
+		&.custom-logo-link {
+			margin-right: 16px !important;
+		}
+	}
+}
+
+@media screen and (min-width:576px) {
+	.navbar-brand {
+		font-size: 2em;
+		padding-top: .75em;
+		padding-bottom: .75em;
+	}
+}
+
+
+
+// || my CSS
+body {
+	font-size: 16px;
+}
+
+// all PAGES & POSTS
+// remove default WP page + post titles
+
+.wrapper {
+	padding: 0;
+	
+	h1.entry-title {
+	display: none;
+	}
+}
+
+h2 {
+	font-size: 2.5em;
+	padding: .5em;
+}
+
+//add space to bottom of pages
+.page .entry-content {
+	padding-bottom: 3em;
+}
+
+// format all POSTS
+// background
+.single {
+	@include gradient-y($start-color: $green-gradient-1, $end-color: $green-gradient-2, $start-percent: 0%, $end-percent: 100%);
+
+	.post {
+		.wp-block-image {
+			img {
+				border-radius: 5px;
+			}
+		}
+	}
+}
+
+// remove post dates
+.entry-meta {
+	display: none;
+}
+
+// add space to bottom
+.blog-post-col {
+	padding-bottom: 2em;
+	margin-top: 2em;
+	margin-bottom: 3em;
+	background-color: white;
+	border-radius: 5px;
+}
+
+//comment button
+.comments-area .btn {
+	@include button-variant($background: $darkblue, $border: $gray-900, $hover-background: darken($darkblue, 7.5%), $hover-border: darken($gray-900, 10%), $active-background: darken($darkblue, 10%), $active-border: darken($gray-900, 12.5%));
+
+}
+
+// general
+// all buttons
+.wp-block-button {
+	border: 1px solid;
+	border-radius: 5px;
+	@include button-variant($background: $green-gradient-1, $border: $gray-900, $hover-background: darken($green-gradient-1, 7.5%), $hover-border: darken($gray-900, 10%), $active-background: darken($green-gradient-1, 10%), $active-border: darken($gray-900, 12.5%));
+
+	.wp-block-button__link {
+		background-color: transparent;
+		color: $gray-900;
+
+		&:hover {
+			color: $gray-700;
+		}
+	}
+}
+
+
+
+//hero image
+.hero-bg-img {
+	box-sizing: border-box;
+	background: $green-gradient-2;
+	background-image: url("https://dev-windsor-worm-farm.pantheonsite.io/wp-content/uploads/2021/11/worm-hero-img-compressed.png");
+	background-position: 10% 0%;
+	background-size: cover;
+	padding-top: 3em;
+	padding-bottom: 3em;
+	border: 1px solid $gray-900;
+	
+	h3 {
+		font-size: 2.5em;
+		color: white;
+		text-shadow: .5px .5px 5px black;
+	}
+	
+	.wp-block-button {
+		margin-top: .5em;
+		margin-bottom: .5em;
+
+		&:nth-child(1) {
+			background-color: $pink !important;
+		}
+
+		&:nth-child(2) {
+			background-color: $yellow !important;
+		}
+	}
+}
+
+@media screen and (min-width:730px) {
+	.hero-bg-img {
+		background-position: center center;
+		background-size: 100vw;
+		padding-top: 8em;
+		padding-bottom: 8em;
+
+		h3 {
+			font-size: 3em;
+		}
+
+		.wp-block-button {
+			margin-top: .75em;
+			margin-bottom: .75em;	
+		}
+	}
+}
+
+
+//color block sections
+//white text
+.white-text-block {
+	box-sizing: border-box;
+	padding: 2em;
+}
+
+//yellow
+.color-block1 {
+	box-sizing: border-box;
+	background-color: $yellow;
+	margin: .75em auto .75em auto;
+	padding: 1.5em;
+	color: black;
+
+	table {
+		tbody {
+			border: none;
+
+			tr {
+				border-top-style: solid;
+				border-right-style: none;
+				border-bottom-style: none;
+				border-left-style: none;
+				border-color: $gray-900;
+
+				&:last-child {
+					border-top-style: none;
+					border-bottom-style: solid;
+				}
+
+				td {
+					border: none;
+				}
+			}
+		}
+	}
+}
+
+//dark blue
+.color-block2 {
+	box-sizing: border-box;
+	background-color: $darkblue;
+	color: $pink;
+	padding: 1.5em .5em 2em .5em;
+
+	.wp-block-button {
+		@include button-variant($background: $pink, $border: $gray-900, $hover-background: darken($pink, 7.5%), $hover-border: darken($gray-900, 10%), $active-background: darken($pink, 10%), $active-border: darken($gray-900, 12.5%))
+	}
+}
+
+//light green (contact form only now)
+.color-block3 {
+	box-sizing: border-box;
+	@include gradient-y($start-color: $green-gradient-1, $end-color: $green-gradient-2, $start-percent: 0%, $end-percent: 100%);
+	border-radius: 6px;
+	border: 2px solid $darkblue;
+	margin-top: 1em;
+	padding: 0 1.5em 0 1.5em;
+}
+
+//color block media queries
+@media screen and (min-width: 768px) {
+	//yellow
+	.color-block1 {
+		max-width: 80%;
+		padding: 1.5em 1em 2em 1em;
+	}
+	.white-text-block {
+		padding: 3em;
+	}
+}
+
+// Page Specific Rules
+.page-id-18 { //Online Catalog Page
+	@include gradient-y($start-color: $green-gradient-1, $end-color: $green-gradient-2, $start-percent: 0%, $end-percent: 100%);
+
+	.catalog-listing-container {
+		padding-bottom: 1em;
+
+		.catalog-listing {
+			width: 80% !important;
+			border: 2px solid $darkblue;
+			border-radius: 	5px;
+			background-color: $soft-white;
+			padding: 1em;
+			margin: 0 auto 0 auto;
+			text-align: center;
+	
+			img {
+				border-radius: 5px;
+				@include img-fluid();
+			}
+		}
+	}
+}
+
+// catalog listing pages
+.page-id-20, .page-id-22 {
+	img {
+		border-radius: 5px;
+		padding: 5px;
+		border: 2px solid $lightgreen;
+	}
+}
+

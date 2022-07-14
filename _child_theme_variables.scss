@@ -1,0 +1,37 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
+
+//Colors
+$primary: #2C2B52;
+$darkblue: #2C2B52;
+$yellow: #FFE600;
+$yellow-active: #ffd000f1;
+$pink: #FEDCFF;
+$pink-active: #f7bce8ea;
+$lightgreen: #72E8B6;
+$lightgreen-active: #3bc78c;
+$green-gradient-1: rgba(76,216,157,1);
+$green-gradient-1-active: rgb(33, 167, 111);
+$green-gradient-2: rgba(0,171,161,1);
+$green-gradient-2-active: rgb(3, 146, 137);
+$soft-white: rgb(245, 245, 245);
+
+
+//Fonts
+$font-family-base: Tahoma;
+
+//Nav
+	
+$navbar-dark-color:                 rgba($lightgreen, .55);
+$navbar-dark-hover-color:           rgba($lightgreen, .75);
+$navbar-dark-active-color:          $lightgreen;
+$navbar-dark-disabled-color:        rgba($lightgreen, .25);
+$navbar-dark-toggler-border-color:  rgba($lightgreen, .1);
+
+//dropdown
+$dropdown-bg: $darkblue;
+$dropdown-link-color: $lightgreen;
+$dropdown-link-hover-color: rgba(white, .55);
+$dropdown-link-hover-bg: rgba($lightgreen, .25);
+$dropdown-border-color: rgba(white, .15);
